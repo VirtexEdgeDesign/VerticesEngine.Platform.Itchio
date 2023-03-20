@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>VerticesEngine.Platforms.Itchio</PackageId>
+		<PackageIcon>icon.png</PackageIcon>
+		<Version>0.1.0</Version>
+		<Company />
+		<Description>Platform wrapper for Itchio player info</Description>
+		<Authors>Virtex.Edge.Design</Authors>
+		<Product>Itchio Platform API Wrapper</Product>
+		<PackageProjectUrl>https://github.com/VirtexEdgeDesign/VerticesEngine.Platform.Itchio</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/VirtexEdgeDesign/VerticesEngine.Platform.Itchio</RepositoryUrl>
+  		<PackageTags>MonoGame, Game Engine</PackageTags>
+  		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="VerticesEngine.Core.Desktop.GL" Version="2.0.0.4-alpha" />
+  </ItemGroup>
+	<ItemGroup>
+		<None Update="AppReference.targets">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="..\LICENSE.md" Pack="true" PackagePath="\" />
+		<None Include="..\img\icon.png" Pack="true" PackagePath="\" />
+    	<None Include="..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+</Project>

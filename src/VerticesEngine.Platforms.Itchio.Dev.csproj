@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>VerticesEngine.Tools.ContentPipelineConfigurator.Task</PackageId>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageIcon>icon.png</PackageIcon>
+		<Version>0.1.0</Version>
+		<Company />
+		<Description>A Content Pipeline addon for Monogame which fully replaces Pipeline UI. This is an extention and port of the original Nopipeline task written by Martenfur/Chai Foxes.</Description>
+		<Authors>Virtex.Edge.Design</Authors>
+		<Product>Vertices Engine Content Pipeline Config Task</Product>
+		<PackageProjectUrl>https://github.com/virtexedge/vertices-tool-pipelineconfig</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/virtexedge/vertices-tool-pipelineconfig</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VerticesEngine.Core\src\desktop.gl\VerticesEngine.Core.Desktop.GL.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<None Update="AppReference.targets">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<Content Include="VerticesEngine.Tools.ContentPipelineConfigurator.Task.targets" PackagePath="build" />
+		<None Include="..\..\LICENSE.md">
+		  <Pack>True</Pack>
+		  <PackagePath></PackagePath>
+		</None>
+		<None Include="..\..\img\icon.png">
+		  <Pack>True</Pack>
+		  <PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+</Project>
