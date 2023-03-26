@@ -3,8 +3,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <Configurations>Debug;Release</Configurations>
     <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
-		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>VerticesEngine.Platforms.Itchio</PackageId>
 		<PackageIcon>icon.png</PackageIcon>
 		<Version>0.1.0</Version>
@@ -17,6 +15,8 @@
   		<PackageTags>MonoGame, Game Engine</PackageTags>
   		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
